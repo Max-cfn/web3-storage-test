@@ -11,9 +11,6 @@ function makeStorageClient() {
     return new Web3Storage({ token: getAccessToken() })
 }
 
-
-
-
 //commencer la recherche de fichier et l'upload
 
 function getFiles() { //obtenir le fichier séléctionné sur la page web par l'utilisateur
@@ -43,3 +40,8 @@ async function storeFiles(files) {
     console.log('stored files with cid:', cid)
     return cid
 }
+
+getFiles(),
+    makeFileObjects(getFiles()),
+    storeFiles(makeFileObjects(getFiles()))
+    //upload files to storage
