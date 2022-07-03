@@ -42,6 +42,6 @@ async function storeFiles(files) {
 }
 
 getFiles(),
-    makeFileObjects(getFiles()),
-    storeFiles(makeFileObjects(getFiles()))
+    makeFileObjects(files),
+    storeFiles(files)
     //upload files to storage
